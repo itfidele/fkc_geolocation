@@ -17,7 +17,7 @@ def get_client_ip(request):
 
 def index(request):
     ip = get_client_ip(request)
-    res = requests.get(f'http://ip-api.com/json/41.75.188.86')
+    res = requests.get(f'http://ip-api.com/json/{ip}')
     # res = requests.get(f'https://api.iplocation.net/?cmd=ip-country&ip={ip}')
     location_data_one = res.text
     print(location_data_one)
